@@ -17,7 +17,7 @@ function ffpw_featured_post_checkbox() {
 	
 	<div class="misc-pub-section ffpw-featured-post">
 		<input type="hidden" name="ffpw_featured_post" value="0" />
-		<input id="ffpw_featured_post" type="checkbox" name="ffpw_featured_post" value="1" <?php checked( 1, get_post_meta( $_GET[ 'post' ], '_ffpw_featured', true ) ); ?> />
+		<input id="ffpw_featured_post" type="checkbox" name="ffpw_featured_post" value="1" <?php checked( 1, get_post_meta( intval( $_GET[ 'post' ] ), '_ffpw_featured', true ) ); ?> />
 		<label for="ffpw_featured_post"><?php _e( 'Make featured', 'flexible-featured-post-widget' ); ?></label>
 	</div>
 	
@@ -62,7 +62,7 @@ function ffpw_featured_post_checkbox_save( $post_id ) {
 	if( isset( $_POST[ 'ffpw_featured_post' ] ) ) {
 		
 		/* update post meta with the contact page value */
-		update_post_meta( $post_id, '_ffpw_featured', $_POST[ 'ffpw_featured_post' ] );
+		update_post_meta( $post_id, '_ffpw_featured', sanitize_text_field( $_POST[ 'ffpw_featured_post' ] ) );
 		
 	}
 	

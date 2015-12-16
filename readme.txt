@@ -16,6 +16,8 @@ This plugin allow you to mark posts (by default) as featured, using a checkbox a
 
 Through extensible features, additional widget options can be added and the widget output can easily be customised. Additional there are a number of hooks and filters in place to allow developers to extend the plugin, for example making additional post types have the ability to be featured as well as just posts.
 
+You can read the accompanying blog about this plugin here: [http://markwilkinson.me/2015/12/flexible-featured-post-widget/](http://markwilkinson.me/2015/12/flexible-featured-post-widget/)
+
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
