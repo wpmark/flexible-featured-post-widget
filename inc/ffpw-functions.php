@@ -56,7 +56,9 @@ function ffpw_get_image_sizes() {
 }
 
 /**
+ * function ffpw_get_image_sizes_for_select()
  *
+ * gets an array of image sizes suitable for a select loop
  */
 function ffpw_get_image_sizes_for_select() {
 	
