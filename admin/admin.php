@@ -18,7 +18,7 @@ function ffpw_featured_post_checkbox() {
 	<div class="misc-pub-section ffpw-featured-post">
 		<input type="hidden" name="ffpw_featured_post" value="0" />
 		<input id="ffpw_featured_post" type="checkbox" name="ffpw_featured_post" value="1" <?php checked( 1, get_post_meta( $_GET[ 'post' ], '_ffpw_featured', true ) ); ?> />
-		<label for="ffpw_featured_post">Make featured</label>
+		<label for="ffpw_featured_post"><?php _e( 'Make featured', 'flexible-featured-post-widget' ); ?></label>
 	</div>
 	
 	<?php

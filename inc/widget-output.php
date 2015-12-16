@@ -73,7 +73,6 @@ function ffpw_featured_post_output( $args, $instance, $post ) {
 				/* add the date to the post meta array */
 				$post_meta[ 'post_date' ] = array(
 					'class'		=> 'post-date',
-					'label'		=> '',
 					'value'		=> get_the_time( get_option( 'date_format' ), $post ),
 					'container'	=> 'div'
 				);
@@ -86,7 +85,7 @@ function ffpw_featured_post_output( $args, $instance, $post ) {
 				/* add the date to the post meta array */
 				$post_meta[ 'show_author' ] = array(
 					'class'		=> 'author',
-					'label'		=> 'By',
+					'label'		=> __( 'By', 'flexible-featured-post-widget' ),
 					'value'		=> get_the_author_meta( 'display_name', $post->post_author ),
 					'container'	=> 'div'
 				);
@@ -209,7 +208,7 @@ function ffpw_featured_post_output( $args, $instance, $post ) {
 				if( $instance[ 'readmore_text' ] == '' ) {
 					
 					/* use default read more text */
-					$instance[ 'readmore_text' ] = 'Read more &raquo;';
+					$instance[ 'readmore_text' ] = __( 'Read more &raquo;', 'flexible-featured-post-widget' );
 					
 				}
 				

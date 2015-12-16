@@ -14,10 +14,10 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 	
 		$this->WP_Widget(
 			'ffpw_flexible_featured_post',
-			__( 'Flexible Featured Post Widget', 'ffpw-widget' ),
+			__( 'Flexible Featured Post Widget', 'flexible-featured-post-widget' ),
 			array(
 				'classname' => 'ffpw-widget',
-				'description' => __( 'Show a featured post in a sidebar.', 'ffpw-widget' )
+				'description' => __( 'Show a featured post in a sidebar.', 'flexible-featured-post-widget' )
 			)
 		);
 	
@@ -204,7 +204,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 						?>
 						
 						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>">
-							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'ffpw-widget' ); ?>
+							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'flexible-featured-post-widget' ); ?>
 							<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="text" value="<?php echo esc_html( $value ); ?>" />
 						</label>
 						
@@ -217,7 +217,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 						?>
 						
 						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>">
-							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'ffpw-widget' ); ?>
+							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'flexible-featured-post-widget' ); ?>
 							<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="number" value="<?php echo esc_html( $value ); ?>" />
 						</label>
 						
@@ -233,7 +233,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 						?>
 							
 						<input type="checkbox" type="checkbox<?php echo esc_attr( $field_class ); ?>" <?php echo $checked; ?> id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" />
-						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>"><?php _e( esc_html( $field[ 'label' ] ), 'ffpw-widget' ); ?></label>
+						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>"><?php _e( esc_html( $field[ 'label' ] ), 'flexible-featured-post-widget' ); ?></label>
 						
 						<?php
 						break;
@@ -244,7 +244,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 						?>
 						
 						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>">
-							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'ffpw-widget' ); ?><br />
+							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'flexible-featured-post-widget' ); ?><br />
 							<textarea class="widefat<?php echo esc_attr( $field_class ); ?>" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="text"><?php echo $value; ?></textarea>
 						</label>
 						
@@ -256,11 +256,11 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 																
 						?>
 						
-						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>"><?php _e( esc_html( $field[ 'label' ] ) . ':', 'ffpw-widget' ); ?></label>
+						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>"><?php _e( esc_html( $field[ 'label' ] ) . ':', 'flexible-featured-post-widget' ); ?></label>
 						
 						<select id="<?php echo $this->get_field_id( $field[ 'id' ] ); ?>" name="<?php echo $this->get_field_name( $field[ 'id' ] ); ?>">
 							
-							<option value="0"><?php _e( '&mdash; Select &mdash;' ); ?></option>
+							<option value="0"><?php _e( '&mdash; Select &mdash;', 'flexible-featured-post-widget' ); ?></option>
 							
 							<?php
 								
