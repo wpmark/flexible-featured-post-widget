@@ -1,11 +1,13 @@
 <?php
 /*
-Plugin Name: Flexible Featured Posts Widget
+Plugin Name: Flexible Featured Post Widget
 Plugin URI: https://github.com/wpmark/flexible-featured-posts-widget
 Description: This plugin provides a sidebar widget to display posts marked as featured in the post edit screen. It provides customisible options for what to display.
 Author: Mark Wilkinson
 Author URI: http://markwilkinson.me
 Version: 1.0
+Text Domain: flexible-featured-post-widget
+Domain Path: /languages/
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -35,6 +37,7 @@ require_once dirname( __FILE__ ) . '/admin/admin.php';
  * include the necessary includes files for the plugin
  */
 require_once dirname( __FILE__ ) . '/inc/ffpw-functions.php';
+require_once dirname( __FILE__ ) . '/inc/widget-fields.php';
 require_once dirname( __FILE__ ) . '/inc/widget.php';
 require_once dirname( __FILE__ ) . '/inc/widget-output.php';
 
