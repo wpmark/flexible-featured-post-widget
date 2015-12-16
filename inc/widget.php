@@ -245,7 +245,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 						
 						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>">
 							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'flexible-featured-post-widget' ); ?><br />
-							<textarea class="widefat<?php echo esc_attr( $field_class ); ?>" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="text"><?php echo sanitize_text_field( $value ); ?></textarea>
+							<textarea class="widefat<?php echo esc_attr( $field_class ); ?>" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="text"><?php echo esc_html( $value ); ?></textarea>
 						</label>
 						
 						<?php
