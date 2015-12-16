@@ -1,0 +1,18 @@
+.ffpw-widget article {
+	margin: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.ffpw-widget article h3.entry-title {
+	font-size: 1.7rem;
+}
+.ffpw-widget article .post-excerpt,
+.ffpw-widget article .post-image,
+.ffpw-widget article .post-meta  {
+	margin-bottom: 16px;
+}
+.ffpw-widget article .post-meta {
+	font-size: 90%;
+	font-style: italic;
+}
