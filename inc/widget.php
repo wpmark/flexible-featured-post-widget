@@ -111,7 +111,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 					case 'number' :
 						
 						if( is_numeric( $new_instance[ $field[ 'id' ] ] ) ) {
-							$instance[ $field[ 'id' ] ] = $new_instance[ $field[ 'id' ] ];
+							$instance[ $field[ 'id' ] ] = intval( $new_instance[ $field[ 'id' ] ] );
 						} else {
 							$instance[ $field[ 'id' ] ] = '';
 						}
@@ -147,7 +147,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 					case 'select' :
 						
 						/* save the new instance - either one or zero */
-						$instance[ $field[ 'id' ] ] = esc_attr( $new_instance[ $field[ 'id' ] ] );
+						$instance[ $field[ 'id' ] ] = sanitize_text_field( $new_instance[ $field[ 'id' ] ] );
 						break;
 					
 					default:
@@ -192,7 +192,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 				}
 				
 				?>
-				<p class="<?php echo esc_attr( $field_class ); ?>">
+				<p class="<?php echo sanitize_html_class( $field_class ); ?>">
 				<?php
 				
 				/* switch depending on the type of field */
@@ -218,7 +218,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 						
 						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>">
 							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'flexible-featured-post-widget' ); ?>
-							<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="number" value="<?php echo esc_html( $value ); ?>" />
+							<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="number" value="<?php echo intval( $value ); ?>" />
 						</label>
 						
 						<?php
@@ -245,7 +245,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 						
 						<label for="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>">
 							<?php _e( esc_html( $field[ 'label' ] ) . ':', 'flexible-featured-post-widget' ); ?><br />
-							<textarea class="widefat<?php echo esc_attr( $field_class ); ?>" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="text"><?php echo $value; ?></textarea>
+							<textarea class="widefat<?php echo esc_attr( $field_class ); ?>" id="<?php echo esc_attr( $this->get_field_id( $field[ 'id' ] ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $field[ 'id' ] ) ); ?>" type="text"><?php echo sanitize_text_field( $value ); ?></textarea>
 						</label>
 						
 						<?php
