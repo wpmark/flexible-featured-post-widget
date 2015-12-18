@@ -12,7 +12,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 	*/
 	function ffpw_flexible_featured_post() {
 	
-		$this->WP_Widget(
+		parent::__construct(
 			'ffpw_flexible_featured_post',
 			__( 'Flexible Featured Post Widget', 'flexible-featured-post-widget' ),
 			array(
