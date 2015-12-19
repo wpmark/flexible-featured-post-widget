@@ -5,7 +5,7 @@ Plugin URI: https://github.com/wpmark/flexible-featured-posts-widget
 Description: This plugin provides a sidebar widget to display posts marked as featured in the post edit screen. It provides customisible options for what to display.
 Author: Mark Wilkinson
 Author URI: http://markwilkinson.me
-Version: 1.0
+Version: 1.0.1
 Text Domain: flexible-featured-post-widget
 Domain Path: /languages/
 
