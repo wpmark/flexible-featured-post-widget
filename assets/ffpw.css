@@ -1,18 +1,18 @@
-.ffpw-widget article {
+.widget_flexible_featured_post article {
 	margin: 0;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
-.ffpw-widget article h3.entry-title {
+.widget_flexible_featured_post article h3.entry-title {
 	font-size: 1.7rem;
 }
-.ffpw-widget article .post-excerpt,
-.ffpw-widget article .post-image,
-.ffpw-widget article .post-meta  {
+.widget_flexible_featured_post article .post-excerpt,
+.widget_flexible_featured_post article .post-image,
+.widget_flexible_featured_post article .post-meta  {
 	margin-bottom: 16px;
 }
-.ffpw-widget article .post-meta {
+.widget_flexible_featured_post article .post-meta {
 	font-size: 90%;
 	font-style: italic;
 }

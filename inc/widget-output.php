@@ -6,9 +6,6 @@
  */
 function ffpw_featured_post_output( $args, $instance, $post ) {
 	
-	/* output any before widget content */
-	echo $args[ 'before_widget' ];
-	
 	/* do we have a widget title */
 	if( $instance[ 'title' ] != '' ) {
 		
@@ -74,7 +71,8 @@ function ffpw_featured_post_output( $args, $instance, $post ) {
 				$post_meta[ 'post_date' ] = array(
 					'class'		=> 'post-date',
 					'value'		=> get_the_time( get_option( 'date_format' ), $post ),
-					'container'	=> 'div'
+					'container'	=> 'div',
+					'label'		=> ''
 				);
 				
 			}
@@ -232,9 +230,6 @@ function ffpw_featured_post_output( $args, $instance, $post ) {
 	</article><!-- // post-class -->
 	
 	<?php
-	
-	/* output any after widget content */
-	echo $args[ 'after_widget' ];
 	
 }
 

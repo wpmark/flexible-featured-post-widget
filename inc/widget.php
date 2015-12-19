@@ -6,21 +6,9 @@
  */
 class FFPW_Flexible_Featured_Post extends WP_Widget {
 	
-	/**
-	* sets up the widget settings
-	* description and classesname for example
-	*/
-	function ffpw_flexible_featured_post() {
-	
-		$this->WP_Widget(
-			'ffpw_flexible_featured_post',
-			__( 'Flexible Featured Post Widget', 'flexible-featured-post-widget' ),
-			array(
-				'classname' => 'ffpw-widget',
-				'description' => __( 'Show a featured post in a sidebar.', 'flexible-featured-post-widget' )
-			)
-		);
-	
+	public function __construct() {
+		$widget_ops = array( 'classname' => 'widget_flexible_featured_post', 'description' => __( 'Show a featured post in a sidebar.', 'flexible-featured-post-widget' ) );
+		parent::__construct( 'ffpw_flexible_featured_post', __( 'Flexible Featured Post Widget', 'flexible-featured-post-widget' ), $widget_ops );
 	}
 	
 	/**
@@ -52,7 +40,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 		if( $ffpw_post->have_posts() ) {
 			
 			/* output the markup set before the widget */
-			echo $before_widget;
+			echo $args[ 'before_widget' ];
 			
 			/* loop through the post */
 			while( $ffpw_post->have_posts() ) : $ffpw_post->the_post();
@@ -74,7 +62,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 			endwhile;
 			
 			/* output the after widget markup */
-			echo $after_widget;
+			echo $args[ 'after_widget' ];
 			
 		} // end if have featured post
 		
@@ -185,8 +173,14 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 				}
 
 				/* if this field has a class */
-				if( !is_null( $field[ 'class' ] ) ) {
-					$field_class = ' ffpw-widget-field ' . $field[ 'class' ];
+				if( ! empty( $field[ 'class' ] ) ) {
+					
+					if( ! is_null( $field[ 'class' ] ) ) {
+						$field_class = ' ffpw-widget-field ' . $field[ 'class' ];
+					} else {
+						$field_class = ' ffpw-widget-field';
+					}
+					
 				} else {
 					$field_class = ' ffpw-widget-field';
 				}
@@ -288,7 +282,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 				}
 				
 				/* if the field has a description */
-				if( $field[ 'desc' ] != '' ) {
+				if( ! empty( $field[ 'desc' ] ) && $field[ 'desc' ] != '' ) {
 					
 					/* output the description */
 					echo '<span class="widget-field-description"><em>' . esc_html( $field[ 'desc' ] ) . '</em></span>';
