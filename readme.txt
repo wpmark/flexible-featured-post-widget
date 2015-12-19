@@ -4,7 +4,7 @@ Donate link: http://markwilkinson.me/saythanks/
 Tags: widget, featured posts
 Requires at least: 4.3.1
 Tested up to: 4.4
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,7 +110,14 @@ You would have to use the action hooks in the widget output function in order to
 
 == Changelog ==
 
-= 0.1 =
+= 1.0.1 =
+
+* Corrected some minor typos
+* Use the correct constructor method for the widget
+* Changed class name of widget to better match core widgets
+* Correct warning notices with WP_DEBUG turned on
+
+= 1.0 =
 
 * Initial plugin launch
 
