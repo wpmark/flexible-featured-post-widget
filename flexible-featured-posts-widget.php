@@ -21,7 +21,7 @@ GNU General Public License for more details.
 
 */
 
-/* exist if directly accessed */
+/* exit if directly accessed */
 if( ! defined( 'ABSPATH' ) ) exit;
 
 /* define variable for path to this plugin file. */
