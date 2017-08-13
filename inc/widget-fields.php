@@ -11,11 +11,17 @@ function ffpw_default_widget_options_fields( $fields ) {
 		'type'		=> 'text',
 		'label'		=> __( 'Title', 'flexible-featured-post-widget' ),
 	);
+
+	$fields[ 'any_post' ] = array(
+		'id'		=> 'any_post',
+		'type'		=> 'checkbox',
+		'label'		=> __( 'Allow posts that are not featured (defaults to featured posts)', 'flexible-featured-post-widget' ),
+	);
 	
 	$fields[ 'random_post' ] = array(
 		'id'		=> 'random_post',
 		'type'		=> 'checkbox',
-		'label'		=> __( 'Show a random featured post? (defaults to newest)', 'flexible-featured-post-widget' ),
+		'label'		=> __( 'Show a random post? (defaults to newest)', 'flexible-featured-post-widget' ),
 	);
 	
 	$fields[ 'show_date' ] = array(

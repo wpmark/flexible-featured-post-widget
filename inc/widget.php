@@ -32,11 +32,28 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 			$featured_post_query_args[ 'orderby' ] = 'rand';
 			
 		}
+
+		/* if the 'use any posts (featured and not featured)' option is selected */
+		if($instance['any_post'] == 1 ) {
+
+			/* revert query arg back to post post-type */
+			$featured_post_query_args['post_type'] = 'post';
+			$featured_post_query_args['meta_key'] = '';
+
+			/* setup a query to retrieve all posts */
+			$ffpw_post = new WP_Query( $featured_post_query_args );
+
+		}
+
+		/* if the 'use any posts (featured and not featured)' option is not selected (default) */
+		if($instance['any_post'] == 0) {
 		
-		/* setup a query to get the featured post */
-		$ffpw_post = new WP_Query( apply_filters( 'ffpw_featured_post_query_args', $featured_post_query_args ) );
+			/* setup a query to get the featured post */
+			$ffpw_post = new WP_Query( apply_filters( 'ffpw_featured_post_query_args', $featured_post_query_args ) );
 		
-		/* check if we have featured posts to show */
+		}
+
+			/* check if we have featured / any posts to show */
 		if( $ffpw_post->have_posts() ) {
 			
 			/* output the markup set before the widget */
@@ -70,6 +87,7 @@ class FFPW_Flexible_Featured_Post extends WP_Widget {
 		wp_reset_query();
 	
 	}
+
 	
 	/**
 	 * updates the widget options when saved
