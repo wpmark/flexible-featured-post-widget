@@ -183,7 +183,7 @@ function ffpw_featured_post_output( $args, $instance, $post ) {
 				?>
 				
 				<div class="post-excerpt">
-					<?php echo wp_trim_words( $post->post_excerpt, (int) $instance[ 'excerpt_length' ], '...' ); ?>
+					<?php echo wp_trim_words(  get_the_excerpt(), (int) $instance[ 'excerpt_length' ], '...' ); ?>
 				</div><!-- // post-excerpt -->
 				
 				<?php
